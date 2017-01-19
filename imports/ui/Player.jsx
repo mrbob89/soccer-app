@@ -20,10 +20,15 @@ const styles = {
 
 export default class Player extends Component {
     render() {
+        const { player } = this.props;
+        const defence = player.duelTackling + player.fieldCoverage + player.gameStrategy + player.playmakingRisks;
+        const offence = player.kickingAbilities + player.gameStrategy + player.ballManipulation + player.passingAbilities + player.playmakingRisks;
+        const total = offence + player.duelTackling + player.fieldCoverage + player.gameStrategy;
+
         return (
             <Card>
                 <CardMedia
-                  overlay={<CardTitle title="Zinedin Zidan" subtitle="Offence: 12 - Defence: 8" />}
+                  overlay={<CardTitle title={player.name} subtitle={`Offence: ${offence} - Defence: ${defence} - Total: ${total}`} />}
                 >
                     <img src="player.jpg" />
                 </CardMedia>
@@ -31,15 +36,51 @@ export default class Player extends Component {
                     <div style={styles.wrapper}>
                         <Chip backgroundColor={blue200} style={styles.chip}>
                             <Avatar size={32} color={blue200} backgroundColor={blue900}>
-                                2
+                                {player.ballManipulation}
                             </Avatar>
                             Ball Manipulation
                         </Chip>
                         <Chip backgroundColor={blue200} style={styles.chip}>
                             <Avatar size={32} color={blue200} backgroundColor={blue900}>
-                                2
+                                {player.kickingAbilities}
                             </Avatar>
                             Kicking abilities
+                        </Chip>
+                        <Chip backgroundColor={blue200} style={styles.chip}>
+                            <Avatar size={32} color={blue200} backgroundColor={blue900}>
+                                {player.passingAbilities}
+                            </Avatar>
+                            Passing abilities
+                        </Chip>
+                        <Chip backgroundColor={blue200} style={styles.chip}>
+                            <Avatar size={32} color={blue200} backgroundColor={blue900}>
+                                {player.duelTackling}
+                            </Avatar>
+                            Duel tackling
+                        </Chip>
+                        <Chip backgroundColor={blue200} style={styles.chip}>
+                            <Avatar size={32} color={blue200} backgroundColor={blue900}>
+                                {player.fieldCoverage}
+                            </Avatar>
+                            Field coverage
+                        </Chip>
+                        <Chip backgroundColor={blue200} style={styles.chip}>
+                            <Avatar size={32} color={blue200} backgroundColor={blue900}>
+                                {player.blockingAbilities}
+                            </Avatar>
+                            Blocking abilities
+                        </Chip>
+                        <Chip backgroundColor={blue200} style={styles.chip}>
+                            <Avatar size={32} color={blue200} backgroundColor={blue900}>
+                                {player.gameStrategy}
+                            </Avatar>
+                            Game strategy
+                        </Chip>
+                        <Chip backgroundColor={blue200} style={styles.chip}>
+                            <Avatar size={32} color={blue200} backgroundColor={blue900}>
+                                {player.playmakingRisks}
+                            </Avatar>
+                            Playmaking risks
                         </Chip>
                     </div>
                 </CardText>
