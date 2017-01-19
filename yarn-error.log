@@ -1,0 +1,44 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Users\Bobo\Desktop\cmder\bin;C:\Users\Bobo\Desktop\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\Users\Bobo\Desktop\cmder\vendor\conemu-maximus5;C:\Users\Bobo\Desktop\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files\Dell\DW WLAN Card;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\APPM\php-7.1.0-Win32-VC14-x64;C:\ProgramData\ComposerSetup\bin;C:\Users\Bobo\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Yarn\bin;C:\Users\Bobo\AppData\Roaming\nvm\v6.9.1;C:\Users\Bobo\AppData\Roaming\Composer\vendor\bin;C:\Users\Bobo\AppData\Local\Microsoft\WindowsApps;C:\Users\Bobo\.babun;C:\Users\Bobo\AppData\Roaming\npm;C:\home\pear;C:\Users\Bobo\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Bobo\AppData\Local\Yarn\.bin;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Bobo\AppData\Local\atom\bin;C:\Users\Bobo\AppData\Local\.meteor\;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;C:\Users\Bobo\Desktop\cmder\
+
+Yarn version: 
+  0.16.1
+
+Node version: 
+  6.9.1
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "soccer-app",
+    "private": true,
+    "scripts": {
+      "start": "meteor run"
+    },
+    "dependencies": {
+      "babel-runtime": "^6.18.0",
+      "material-ui": "^0.16.7",
+      "meteor-node-stubs": "~0.2.0",
+      "react": "^15.4.2",
+      "react-dom": "^15.4.2",
+      "react-tap-event-plugin": "^2.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+bower manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Bobo\Documents\apps_coding\01_React_Meteor_App\soccer-app\node_modules\.yarn-integrity'
+      at Error (native)
