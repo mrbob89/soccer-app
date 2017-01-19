@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class TeamStats extends Component {
     render() {
         return (
-            <h1>Team stats</h1>
+            <h2>Team stats</h2>
         );
     }
 }

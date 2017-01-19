@@ -28,18 +28,20 @@ export default class Player extends Component {
                     <img src="player.jpg" />
                 </CardMedia>
                 <CardText>
-                    <Chip backgroundColor={blue200} style={styles.chip}>
-                        <Avatar size={32} color={blue200} backgroundColor={blue900}>
-                            2
-                        </Avatar>
-                        Ball Manipulation
-                    </Chip>
-                    <Chip backgroundColor={blue200} style={styles.chip}>
-                        <Avatar size={32} color={blue200} backgroundColor={blue900}>
-                            2
-                        </Avatar>
-                        Kicking abilities
-                    </Chip>
+                    <div style={styles.wrapper}>
+                        <Chip backgroundColor={blue200} style={styles.chip}>
+                            <Avatar size={32} color={blue200} backgroundColor={blue900}>
+                                2
+                            </Avatar>
+                            Ball Manipulation
+                        </Chip>
+                        <Chip backgroundColor={blue200} style={styles.chip}>
+                            <Avatar size={32} color={blue200} backgroundColor={blue900}>
+                                2
+                            </Avatar>
+                            Kicking abilities
+                        </Chip>
+                    </div>
                 </CardText>
                 <CardActions>
 
