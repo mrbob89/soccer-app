@@ -13,6 +13,7 @@ import { Players } from '../api/players.js';
 import Player from './Player.jsx';
 import TeamList from './TeamList.jsx';
 import TeamStats from './TeamStats.jsx';
+import AccountsWrapper from './AccountsWrapper';
 
 class App extends Component {
     constructor(props) {
@@ -33,7 +34,9 @@ class App extends Component {
                         title="Soccer Application"
                         iconClassNameRight="muidocs-icon-navigation-expand-more"
                         showMenuIconButton={false}
-                    />
+                    >
+                        <AccountsWrapper />
+                    </AppBar>
                     <div className="row">
                         <div className="col s12 m7"><Player /></div>
                         <div className="col s12 m5">
