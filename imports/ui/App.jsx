@@ -14,6 +14,7 @@ import Player from './Player.jsx';
 import TeamList from './TeamList.jsx';
 import TeamStats from './TeamStats.jsx';
 import AccountsWrapper from './AccountsWrapper';
+import Edit from './EditPlayer.jsx';
 
 const templPlayer = {
     name: "Temp player",
@@ -34,10 +35,13 @@ class App extends Component {
         super(props);
 
         this.state = {
-            currentPlayer: templPlayer
+            currentPlayer: templPlayer,
+            showEditPlayer: false,
         }
 
         this.updateCurrentPlayer = this.updateCurrentPlayer.bind(this);
+        this.showEditForm = this.showEditForm.bind(this);
+        this.showTeamStats = this.showTeamStats.bind(this);
     }
 
     renderPlayers() {
@@ -56,6 +60,30 @@ class App extends Component {
         });
     }
 
+    showEditForm() {
+        this.setState({
+            showEditPlayer: true
+        });
+    }
+
+    showTeamStats() {
+        this.setState({
+            showEditPlayer: false
+        });
+    }
+
+    showForm() {
+        if (this.state.showEditPlayer) {
+            return ( <Edit
+                        currentPlayer={this.state.currentPlayer}
+                        showTeamStats={this.showTeamStats}
+                    /> );
+
+        } else {
+            return ( <TeamStats /> )
+        }
+    }
+
     render() {
         return (
             <MuiThemeProvider>
@@ -69,7 +97,10 @@ class App extends Component {
                     </AppBar>
                     <div className="row">
                         <div className="col s12 m7">
-                            <Player player={this.state.currentPlayer}/>
+                            <Player
+                                player={this.state.currentPlayer}
+                                showEditForm={this.showEditForm}
+                            />
                         </div>
                         <div className="col s12 m5">
                             <h2>Team List</h2>
@@ -80,7 +111,9 @@ class App extends Component {
                             </List>
                             <Divider />
                         </div>
-                        <div className="col s12 m5"><TeamStats /></div>
+                        <div className="col s12 m5">
+                            {this.showForm()}
+                        </div>
                     </div>
                 </div>
             </MuiThemeProvider>
